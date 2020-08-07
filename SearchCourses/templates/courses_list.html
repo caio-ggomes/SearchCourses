@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item">Lista de Cursos</li>
+{% endblock %}
+
+{% block content %}
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Nome do Curso</th>
+        <th>Plataforma</th>
+        <th>Avaliação</th>
+        <th>Inscrições</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for course in courses %}
+        <tr>
+          <td>{{ course.name }}</td>
+          <td>{{ course.platform.name }}</td>
+          <td>0</td>
+          <td>0</td>
+          <td>{{ course.description }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

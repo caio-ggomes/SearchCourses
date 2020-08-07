@@ -1,7 +1,7 @@
 """SearchCourses URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.1/topics/http/urls/
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -19,6 +19,8 @@ from django.urls import path
 from searcher import views
 
 urlpatterns = [
+    path('', views.home, name='home'),
+    path('searcher/', views.search_course, name='search_form'),
+    path('searcher/courses_list/', views.courses_list, name='courses_list'),
     path('admin/', admin.site.urls),
-    path('', views.home, name='home')
 ]
