@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import datetime
 
 # Create your models here.
 
@@ -19,15 +20,27 @@ class Platform(models.Model):
         return self.name
 
 
+class Difficulty(models.Model):
+    name = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.name
+
+class Duration(models.Model):   # Classification, not duration in time unities
+    name = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.name
+
 class Course(models.Model):
     name = models.CharField(max_length=31)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name='courses')
     platform = models.ForeignKey(Platform, on_delete=models.CASCADE, related_name='courses')
+    difficulty = models.ForeignKey(Difficulty, on_delete=models.CASCADE, related_name='courses')
+    duration = models.ForeignKey(Duration, on_delete=models.CASCADE, related_name='courses')
     starter = models.ForeignKey(User, on_delete=models.CASCADE, related_name='courses')
     last_updated = models.DateTimeField(auto_now_add=True)
-    difficulty = models.CharField(max_length=31)
-    duration = models.TimeField()
-    duration_evaluation = models.CharField(max_length=15)
+    duration_time = models.TimeField(default=datetime.time(16,00))
     description = models.TextField(max_length=2047)
     evaluation = models.FloatField()
 

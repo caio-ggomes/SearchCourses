@@ -21,6 +21,6 @@ from searcher import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('searcher/', views.search_course, name='search_form'),
-    path('searcher/courses_list/', views.courses_list, name='courses_list'),
+    path('searcher/<int:search_id>/courses_list/', views.courses_list, name='courses_list'),
     path('admin/', admin.site.urls),
 ]
