@@ -1,11 +1,12 @@
 from django.db.utils import OperationalError
 from django.shortcuts import get_object_or_404
-from .models import Subject, Platform, Difficulty, Duration
+from .models import Subject, Platform, Difficulty, Duration, Language
 
 subject_choices = list()
 platform_choices = list()
 difficulty_choices = list()
 duration_choices = list()
+language_choices = list()
 
 try:
     for subject in Subject.objects.all():
@@ -16,5 +17,7 @@ try:
         difficulty_choices.append((difficulty.name, difficulty.name))
     for duration in Duration.objects.all():
         duration_choices.append((duration.name, duration.name))
+    for language in Language.objects.all():
+        language_choices.append((language.name, language.name))
 except OperationalError:
     pass

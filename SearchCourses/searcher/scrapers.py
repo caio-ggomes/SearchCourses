@@ -1,5 +1,5 @@
-import requests, time
-from requests_html import HTMLSession
+import time#, requests
+#from requests_html import HTMLSession
 from selenium import webdriver
 from bs4 import BeautifulSoup as bs
 
@@ -22,12 +22,12 @@ from bs4 import BeautifulSoup as bs
 #       print(teste.all())
 
 class Scraper():
-    def __init__(self, subject, language, duration, dificulty):
+    def __init__(self, subject, language, duration, difficulty):
         self.subject = subject.strip()
         self.subject = self.subject.replace(' ', '%20')
         self.language = language
         self.duration = duration
-        self.dificulty = dificulty
+        self.difficulty = difficulty
 
     def base(self, base_url, search_url, class_selector):
         links = []
@@ -53,17 +53,17 @@ class Scraper():
         temp = self.subject
         self.subject = self.subject.replace('%20', '+')
         dict = {
-            "ingles": "en",
-            "portugues": "pt",
-            "tudo_l": "en&duration=pt",
-            "iniciante": "beginner",
-            "intermediario": "intermediate",
-            "avancado": "expert",
-            "tudo_n": "beginner&instructional_level=intermediate&instructional_level=expert",
-            "curto": "short",
-            "medio": "medium",
-            "longo": "long&duration=extraLong",
-            "tudo_d": "short&duration=medium&duration=long&duration=extraLong"
+            "Inglês": "en",
+            "Português": "pt",
+            "Qualquer Idioma": "en&duration=pt",
+            "Básico": "beginner",
+            "Intermediário": "intermediate",
+            "Avançado": "expert",
+            "Qualquer Dificuldade": "beginner&instructional_level=intermediate&instructional_level=expert",
+            "Curto": "short",
+            "Médio": "medium",
+            "Longo": "long&duration=extraLong",
+            "Qualquer Duração": "short&duration=medium&duration=long&duration=extraLong"
         }
         links = []
         try:
@@ -80,17 +80,17 @@ class Scraper():
 
     def coursera(self):
         dict = {
-            "ingles": "English",
-            "portugues": "Portuguese",
-            "tudo_l": "English&allLanguages=Portuguese",
-            "iniciante": "Beginner",
-            "intermediario": "Intermediate",
-            "avancado": "Advanced",
-            "tudo_n": "Beginner&productDifficultyLevel=Intermediate&productDifficultyLevel=Advanced",
-            "curto": "Less%20Than%202%20Hours&productDurationEnum=1-4%20Weeks",
-            "medio": "1-3%20Months",
-            "longo": "3%2B%20Months",
-            "tudo_d": "Less%20Than%202%20Hours&productDurationEnum=1-4%20Weeks&productDurationEnum=1-3%20Months&productDurationEnum=3%2B%20Months"
+            "Inglês": "English",
+            "Português": "Portuguese",
+            "Qualquer Idioma": "English&allLanguages=Portuguese",
+            "Básico": "Beginner",
+            "Intermediário": "Intermediate",
+            "Avançado": "Advanced",
+            "Qualquer Dificuldade": "Beginner&productDifficultyLevel=Intermediate&productDifficultyLevel=Advanced",
+            "Curto": "Less%20Than%202%20Hours&productDurationEnum=1-4%20Weeks",
+            "Médio": "1-3%20Months",
+            "Longo": "3%2B%20Months",
+            "Qualquer Duração": "Less%20Than%202%20Hours&productDurationEnum=1-4%20Weeks&productDurationEnum=1-3%20Months&productDurationEnum=3%2B%20Months"
         }
         links = []
         try:
@@ -108,17 +108,17 @@ class Scraper():
 
     def edx(self):
         dict = {
-            "ingles": "English",
-            "portugues": "Portuguese",
-            "tudo_l": "English&language=Portuguese",
-            "iniciante": "Introductory",
-            "intermediario": "Intermediate",
-            "avancado": "Advanced",
-            "tudo_n": "Introductory&level=Intermediate&level=Advanced",
-            "curto": "Less%20Than%202%20Hours&productDurationEnum=1-4%20Weeks",
-            "medio": "1-3%20Months",
-            "longo": "3%2B%20Months",
-            "tudo_d": "Less%20Than%202%20Hours&productDurationEnum=1-4%20Weeks&productDurationEnum=1-3%20Months&productDurationEnum=3%2B%20Months"
+            "Inglês": "English",
+            "Português": "Portuguese",
+            "Qualquer Idioma": "English&language=Portuguese",
+            "Básico": "Introductory",
+            "Intermediário": "Intermediate",
+            "Avançado": "Advanced",
+            "Qualquer Dificuldade": "Introductory&level=Intermediate&level=Advanced",
+            "Curto": "Less%20Than%202%20Hours&productDurationEnum=1-4%20Weeks",
+            "Médio": "1-3%20Months",
+            "Longo": "3%2B%20Months",
+            "Qualquer Duração": "Less%20Than%202%20Hours&productDurationEnum=1-4%20Weeks&productDurationEnum=1-3%20Months&productDurationEnum=3%2B%20Months"
         }
         links = []
         try:

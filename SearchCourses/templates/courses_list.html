@@ -10,19 +10,24 @@
       <tr>
         <th>Nome do Curso</th>
         <th>Plataforma</th>
+        <th>Idioma</th>
+        <th>Duração</th>
+        <th>Dificuldade</th>
+        <th>Duração</th>
         <th>Avaliação</th>
-        <th>Inscrições</th>
-        <th>Descrição</th>
+        <th>Link</th>
       </tr>
     </thead>
     <tbody>
       {% for course in courses %}
         <tr>
           <td>{{ course.name }}</td>
-          <td>{{ course.platform.name }}</td>
-          <td>0</td>
-          <td>0</td>
-          <td><small class="form-text text-muted">{{ course.description }}</small></td>
+          <td>{{ course.platform }}</td>
+          <td>{{ course.language }}</td>
+          <td>{{ course.duration_time }}</td>
+          <td>{{ course.difficulty }}</td>
+          <td>{{ course.evaluation }}</td>
+          <td><a href="{{ course.link }}">{{ course.link }}</a></td>
         </tr>
       {% endfor %}
     </tbody>

@@ -21,28 +21,36 @@ class Platform(models.Model):
 
 
 class Difficulty(models.Model):
-    name = models.CharField(max_length=15)
+    name = models.CharField(max_length=31, unique=True)
 
     def __str__(self):
         return self.name
 
 class Duration(models.Model):   # Classification, not duration in time unities
-    name = models.CharField(max_length=15)
+    name = models.CharField(max_length=31, unique=True)
 
     def __str__(self):
         return self.name
 
+
+class Language(models.Model):
+    name = models.CharField(max_length=31, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Course(models.Model):
     name = models.CharField(max_length=31)
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name='courses')
-    platform = models.ForeignKey(Platform, on_delete=models.CASCADE, related_name='courses')
-    difficulty = models.ForeignKey(Difficulty, on_delete=models.CASCADE, related_name='courses')
-    duration = models.ForeignKey(Duration, on_delete=models.CASCADE, related_name='courses')
-    starter = models.ForeignKey(User, on_delete=models.CASCADE, related_name='courses')
-    last_updated = models.DateTimeField(auto_now_add=True)
+    subject = models.CharField(default='default', max_length=31)
+    platform = models.CharField(default='default', max_length=31)
+    difficulty = models.CharField(default='default', max_length=31)
+    language = models.CharField(default='default', max_length=31)
+    duration = models.CharField(default='default', max_length=31)
     duration_time = models.TimeField(default=datetime.time(16,00))
     description = models.TextField(max_length=2047)
-    evaluation = models.FloatField()
+    evaluation = models.FloatField(default=0.0)
+    link = models.URLField(default='http://127.0.0.1:8000/', max_length=200)
 
     def __str__(self):
         return self.name
@@ -50,8 +58,9 @@ class Course(models.Model):
 
 class Search(models.Model):
     subject = models.CharField(max_length=31)
-    platform = models.CharField(max_length=127)
-    difficulty = models.CharField(max_length=63)
+    platform = models.CharField(max_length=31)
+    difficulty = models.CharField(max_length=31)
     duration = models.CharField(max_length=31)
+    language = models.CharField(default='default', max_length=31)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='searchs')
     created_at = models.DateTimeField(auto_now_add=True)
