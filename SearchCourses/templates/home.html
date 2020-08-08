@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
 
 {% block breadcrumb %}
-  <li class="breadcrumb-item active">Search Courses é uma plataforma online para...</li>
+  <li class></li>The website aims to help students find free specialization courses during the quarantine period.</li>
+  <li class></li>The user goes to the search page and selects an area in which he wants to specialize and </li>
+  <li class></li>then this service returns a set of free online courses that are related to that particular area.</li>
+  <li class></li>For this, we will use a database containing the course topics, the associated platform, among other parameters.</li>
 {% endblock %}
 
 {% block content %}
-  <a href="{% url 'search_form' %}">Procure agora!</a>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {% include 'includes/form.html' %}
+    <button type="submit" class="btn btn-success"> Go to the Search Page </button>
+  </form>
 {% endblock %}
