@@ -6,7 +6,7 @@ class SearchForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(SearchForm, self).__init__(*args, **kwargs)
-        self.fields['subject'].widget = forms.Select(choices=subject_choices)
+        self.fields['subject'].widget = forms.TextInput()
         self.fields['platform'].widget = forms.Select(choices=platform_choices)
         self.fields['difficulty'].widget = forms.Select(choices=difficulty_choices)
         self.fields['duration'].widget = forms.Select(choices=duration_choices)

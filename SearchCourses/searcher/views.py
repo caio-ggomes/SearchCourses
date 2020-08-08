@@ -20,14 +20,17 @@ def courses_list(request, search_id):
     courses_links = list()
     if search.platform == 'Udemy':
         courses_links = scraper.udemy()
-    if search.platform == 'edX':
+    elif search.platform == 'edX':
         courses_links = scraper.edx()
-    if search.platform == 'Coursera':
+    elif search.platform == 'Coursera':
         courses_links = scraper.coursera()
+    elif search.platform == 'Qualquer Plataforma':
+        courses_links = scraper.all()
     courses = list()
     for course_link in courses_links:
-        course = Course.objects.get(link=course_link)
-        if(course.DoesNotExist):
+        try:
+            course = Course.objects.get(link=course_link)
+        except:
             course = Course(
                 subject=search.subject,
                 platform=search.platform,

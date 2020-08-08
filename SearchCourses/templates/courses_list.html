@@ -9,12 +9,6 @@
     <thead class="thead-inverse">
       <tr>
         <th>Nome do Curso</th>
-        <th>Plataforma</th>
-        <th>Idioma</th>
-        <th>Duração</th>
-        <th>Dificuldade</th>
-        <th>Duração</th>
-        <th>Avaliação</th>
         <th>Link</th>
       </tr>
     </thead>
@@ -22,11 +16,6 @@
       {% for course in courses %}
         <tr>
           <td>{{ course.name }}</td>
-          <td>{{ course.platform }}</td>
-          <td>{{ course.language }}</td>
-          <td>{{ course.duration_time }}</td>
-          <td>{{ course.difficulty }}</td>
-          <td>{{ course.evaluation }}</td>
           <td><a href="{{ course.link }}">{{ course.link }}</a></td>
         </tr>
       {% endfor %}

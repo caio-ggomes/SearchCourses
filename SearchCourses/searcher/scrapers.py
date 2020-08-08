@@ -1,5 +1,5 @@
-import time#, requests
-#from requests_html import HTMLSession
+import time, requests
+from requests_html import HTMLSession
 from selenium import webdriver
 from bs4 import BeautifulSoup as bs
 
@@ -68,7 +68,7 @@ class Scraper():
         links = []
         try:
             url = "https://www.udemy.com/courses/search/?duration=" + dict[str(self.duration)]
-            url = url + "&instructional_level=" + dict[str(self.dificulty)]
+            url = url + "&instructional_level=" + dict[str(self.difficulty)]
             url = url + "&lang=" + dict[str(self.language)] + "&price=price-free&q=" + str(self.subject) + "&sort=relevance"
             classe = "udlite-custom-focus-visible course-card--container--3w8Zm course-card--large--1BVxY"
             links = self.base("https://www.udemy.com", url, classe)
@@ -95,7 +95,7 @@ class Scraper():
         links = []
         try:
             url = "https://www.coursera.org/search?query=" + str(self.subject)
-            url = url + "&index=prod_all_products_term_optimization&productDifficultyLevel=" + dict[str(self.dificulty)]
+            url = url + "&index=prod_all_products_term_optimization&productDifficultyLevel=" + dict[str(self.difficulty)]
             url = url + "&productDurationEnum=" + dict[str(self.duration)] + "&allLanguages=" + dict[str(self.language)]
             classe = "rc-DesktopSearchCard anchor-wrapper"
             links = self.base("https://www.coursera.org", url, classe)
@@ -123,7 +123,7 @@ class Scraper():
         links = []
         try:
             url = "https://www.edx.org/search?availability=Available%20now&language=" + dict[str(self.language)]
-            url = url + "&level=" + dict[str(self.dificulty)] + "&q=" + str(self.subject)
+            url = url + "&level=" + dict[str(self.difficulty)] + "&q=" + str(self.subject)
             classe = "discovery-card-link"
             links = self.base("https://www.edx.org", url, classe)
             if links[0].startswith("https://www.edx.org/professional-certificate/berkeleyx-science-of-happiness-at-work"):

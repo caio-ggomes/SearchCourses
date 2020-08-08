@@ -1,0 +1,101 @@
+1596925178176	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile53Q1Mk"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596925191123	Marionette	INFO	Listening on port 42889
+1596925191143	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596925207725	Marionette	INFO	Stopped listening on port 42889
+1596925220856	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileiHPmSI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596925226917	Marionette	INFO	Listening on port 33037
+1596925227008	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596925245109	Marionette	INFO	Stopped listening on port 33037
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+1596925264680	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiles49ABw"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596925270679	Marionette	INFO	Listening on port 36179
+1596925270732	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.edx.org/search?availability=Available%20now&language=English&level=Introductory&level=Intermediate&level=Advanced&q=python, line 20: uncaught exception: Personalize call failed.
+1596925291261	Marionette	INFO	Stopped listening on port 36179
+1596925404472	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDJs4Ls"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596925408852	Marionette	INFO	Listening on port 42419
+1596925408887	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596925424360	Marionette	INFO	Stopped listening on port 42419
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+1596925515160	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBIyqwo"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596925519738	Marionette	INFO	Listening on port 39075
+1596925519775	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596925538549	Marionette	INFO	Stopped listening on port 39075
+1596926352561	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileEpDi8a"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596926356914	Marionette	INFO	Listening on port 33069
+1596926356991	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: Request failed with status code 500
+1596926367765	Marionette	INFO	Stopped listening on port 33069
+1596926377020	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileIz5Lko"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596926381688	Marionette	INFO	Listening on port 33279
+1596926381750	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596926411044	Marionette	INFO	Stopped listening on port 33279
+1596926421829	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFo2sqW"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596926426342	Marionette	INFO	Listening on port 38549
+1596926426348	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596926442604	Marionette	INFO	Stopped listening on port 38549
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+1596926791726	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileu3yLPo"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596926796128	Marionette	INFO	Listening on port 46239
+1596926796153	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: Request failed with status code 500
+1596926806416	Marionette	INFO	Stopped listening on port 46239
+1596926821383	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileCCwxUS"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596926825844	Marionette	INFO	Listening on port 40523
+1596926825938	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596926851505	Marionette	INFO	Stopped listening on port 40523
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6C0029,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+1596926860020	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilefm6sUk"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596926864496	Marionette	INFO	Listening on port 45829
+1596926864540	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596926878711	Marionette	INFO	Stopped listening on port 45829
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+1596927515825	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile9xWBHI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596927520220	Marionette	INFO	Listening on port 34481
+1596927520241	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: Request failed with status code 500
+1596927534204	Marionette	INFO	Stopped listening on port 34481
+1596927541103	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0YtSYO"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596927545411	Marionette	INFO	Listening on port 38307
+1596927545417	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596927565324	Marionette	INFO	Stopped listening on port 38307
+1596927578006	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNLxgds"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596927582432	Marionette	INFO	Listening on port 35261
+1596927582521	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596927601889	Marionette	INFO	Stopped listening on port 35261
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
