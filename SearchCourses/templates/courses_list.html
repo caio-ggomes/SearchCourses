@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block progressbar %}
+  <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+{% endblock %}
+
+{% block breadcrumb %}
+  <ol class="breadcrumb my-4">
+    <li class="breadcrumb-item">Lista de Cursos</li>
+  </ol>
+{% endblock %}
+
+{% block content %}
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Nome do Curso</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for course in courses %}
+        <tr>
+          <td>{{ course.name }}</td>
+          <td><a href="{{ course.link }}">{{ course.link }}</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
