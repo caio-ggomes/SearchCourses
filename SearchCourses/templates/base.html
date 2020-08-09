@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>{% block title %}SearchCourses{% endblock %}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
   
@@ -20,10 +21,15 @@
     </nav>
     
     <div class="container">
-      <ol class="breadcrumb my-4">
-        {% block breadcrumb %}
+      <br>
+      <div class="progress">
+        {% block progressbar %}
         {% endblock %}
-      </ol>
+      </div>
+      <br>
+      {% block breadcrumb %}
+      {% endblock %}
+      <br>
       {% block content %}
       {% endblock %}
     </div>

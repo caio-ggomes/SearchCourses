@@ -1,13 +1,20 @@
 {% extends 'base.html' %}
 
+{% block progressbar %}
+  <div class="progress-bar" role="progressbar" style="width: 66.7%" aria-valuenow="66.7" aria-valuemin="0" aria-valuemax="100"></div>
+{% endblock %}
+
 {% block breadcrumb %}
-  <li class="breadcrumb-item">Formulário de Pesquisa</li>
+  <ol class="breadcrumb my-4">
+    <li class="breadcrumb-item">Formulário de Pesquisa</li>
+  </ol>
 {% endblock %}
 
 {% block content %}
   <form method="post" novalidate>
     {% csrf_token %}
     {% include 'includes/form.html' %}
+    <br>
     <button type="submit" class="btn btn-success">Pesquisar</button>
   </form>
 {% endblock%}

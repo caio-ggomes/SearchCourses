@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 
-{% block breadcrumb %}
-<li class></li> O SearchCourses representa um website que visa ajudar os estudantes a encontrarem cursos gratuitos  de especialização online, auxiliando </li>
-<li class></li> na preparação acadêmica, que foi consideravelmente afetada pelos efeitos da pandemia do vírus COVID-19. </li>
-<li class></li> Nesse site, o usuário vai para a página de busca e em seguida escolhe alguns parâmetros relativos ao curso que deseja efetuar e o site </li>
-<li class></li> seleciona um conjunto de links de cursos, baseados nesses requisitos, que estão disponibilizados nas plataformas mais famosas da web.</li>
+{% block progressbar %}
+  <div class="progress-bar" role="progressbar" style="width: 33.3%" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="100"></div>
 {% endblock %}
 
 {% block content %}
+  <p class="styled-paragraph"> O SearchCourses representa um website que visa ajudar os estudantes a 
+    encontrarem cursos gratuitos  de especialização online, auxiliando na preparação acadêmica, que 
+    foi consideravelmente afetada pelos efeitos da pandemia do vírus COVID-19. </p>
+  <p class="styled-paragraph"> Nesse site, o usuário vai para a página de busca e em seguida escolhe 
+    alguns parâmetros relativos ao curso que deseja efetuar e o site seleciona um conjunto de links 
+    de cursos, baseados nesses requisitos, que estão disponibilizados nas plataformas mais famosas 
+    da web.</p>
+  <br>
   <form method="post" novalidate>
     {% csrf_token %}
     {% include 'includes/form.html' %}

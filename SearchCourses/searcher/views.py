@@ -18,20 +18,24 @@ def courses_list(request, search_id):
         difficulty=search.difficulty,
     )
     courses_links = list()
+    courses_names = list()
     if search.platform == 'Udemy':
-        courses_links = scraper.udemy()
+        [courses_links, courses_names] = scraper.udemy()
     elif search.platform == 'edX':
-        courses_links = scraper.edx()
+        [courses_links, courses_names] = scraper.edx()
     elif search.platform == 'Coursera':
-        courses_links = scraper.coursera()
+        [courses_links, courses_names] = scraper.coursera()
     elif search.platform == 'Qualquer Plataforma':
-        courses_links = scraper.all()
+        [courses_links, courses_names] = scraper.all()
     courses = list()
+    i = 0
     for course_link in courses_links:
         try:
             course = Course.objects.get(link=course_link)
+            course.name = courses_names[i]
         except:
             course = Course(
+                name=courses_names[i],
                 subject=search.subject,
                 platform=search.platform,
                 difficulty=search.difficulty,
@@ -41,6 +45,7 @@ def courses_list(request, search_id):
             )
             course.save()
         courses.append(course)
+        i += 1
     return render(request, 'courses_list.html', {'courses': courses})
 
 def search_course(request):
