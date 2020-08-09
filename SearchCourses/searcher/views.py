@@ -49,12 +49,10 @@ def courses_list(request, search_id):
     return render(request, 'courses_list.html', {'courses': courses})
 
 def search_course(request):
-    user = User.objects.first() # TODO: get the currently logged in user
     if request.method == 'POST':
         form = SearchForm(request.POST)
         if form.is_valid():
             search = form.save(commit=False)
-            search.created_by = user
             search.save()
             return redirect('courses_list', search_id=search.id)
     else:
