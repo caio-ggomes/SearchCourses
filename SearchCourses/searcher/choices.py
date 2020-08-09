@@ -19,5 +19,5 @@ try:
         duration_choices.append((duration.name, duration.name))
     for language in Language.objects.all():
         language_choices.append((language.name, language.name))
-except OperationalError:
+except:
     pass
