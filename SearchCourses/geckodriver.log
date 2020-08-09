@@ -315,3 +315,14 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 1596992682641	Marionette	INFO	Listening on port 38563
 1596992682687	Marionette	WARN	TLS certificate errors will be ignored for this session
 1596992696658	Marionette	INFO	Stopped listening on port 38563
+1597002970114	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilelf9BZu"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597002974218	Marionette	INFO	Listening on port 40835
+1597002974237	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597002988066	Marionette	INFO	Stopped listening on port 40835
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
