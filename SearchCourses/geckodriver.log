@@ -295,3 +295,23 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 1596988641326	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://www.edx.org/search?availability=Available%20now&language=English&language=Portuguese&level=Introductory&level=Intermediate&level=Advanced&q=Big%20Data, line 20: uncaught exception: Personalize call failed.
 1596988656801	Marionette	INFO	Stopped listening on port 35209
+1596992614639	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJZ2hIE"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596992619023	Marionette	INFO	Listening on port 37057
+1596992619057	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596992629775	Marionette	INFO	Stopped listening on port 37057
+1596992639217	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilefRlbNW"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596992643270	Marionette	INFO	Listening on port 42661
+1596992643338	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://loadus.exelator.com/load/?p=204&g=95&j=d&buid=67f61da0-de9f-397b-5b32-f6003cec03f6, line 1: SyntaxError: expected expression, got '<'
+1596992670771	Marionette	INFO	Stopped listening on port 42661
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1596992678069	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJgH6nz"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596992682641	Marionette	INFO	Listening on port 38563
+1596992682687	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596992696658	Marionette	INFO	Stopped listening on port 38563
